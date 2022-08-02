@@ -1663,7 +1663,7 @@ img {
 }
 
 canvas {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   animation: canvasMove 5s infinite;

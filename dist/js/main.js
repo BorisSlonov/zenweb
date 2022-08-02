@@ -60,10 +60,10 @@ window.addEventListener("scroll", function () {
 /***/ (() => {
 
 var mousePos = {
-  x: .5,
-  y: .5
+  x: 0.5,
+  y: 0.5
 };
-document.addEventListener('mousemove', function (event) {
+document.addEventListener("mousemove", function (event) {
   mousePos = {
     x: event.clientX / window.innerWidth,
     y: event.clientY / window.innerHeight
@@ -131,7 +131,7 @@ function render() {
     var diff = dest.sub(particle.position);
     particle.userData.speed.divideScalar(1.02); // Some drag on the speed
 
-    particle.userData.speed.add(diff.divideScalar(400)); // Modify speed by a fraction of the distance to the dest    
+    particle.userData.speed.add(diff.divideScalar(400)); // Modify speed by a fraction of the distance to the dest
 
     particle.position.add(particle.userData.speed);
     particle.lookAt(dest);
