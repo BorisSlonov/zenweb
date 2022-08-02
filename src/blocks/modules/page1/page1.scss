@@ -1,0 +1,35 @@
+.page1 {
+  position: relative;
+  z-index: 10;
+}
+
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: canvasMove 5s infinite;
+}
+
+@keyframes canvasMove {
+  0% {
+    transform: translate(0);
+  }
+  25% {
+    transform: translate(-10%, 10%);
+  }
+  50% {
+    transform: translate(20%, 20%);
+  }
+  75% {
+    transform: translate(30%, -20%);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
+@media (max-width: 1192px) {
+  .section-page1 {
+    padding-top: 100px;
+  }
+}
