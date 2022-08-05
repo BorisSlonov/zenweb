@@ -107,10 +107,10 @@
   transition: max-height 2s cubic-bezier(0, 1, 0, 1), margin 0.1s ease;
   border-left: 1px solid transparent;
   border-left: 1px solid var(--pink);
+  color:#fff;
 }
 .acc-active {
   background-color: var(--darken);
-  color: #fff;
 }
 
 .acc-active + .accordion__txt {
@@ -118,6 +118,7 @@
   transition: max-height 2s ease, margin 0.1s ease;
   margin-bottom: 20px;
   margin-top: 20px;
+  color: #fff;
 }
 
 //accordion__list
