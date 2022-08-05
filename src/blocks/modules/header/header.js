@@ -26,6 +26,7 @@ window.addEventListener("scroll", function () {
   let scrolled = window.pageYOffset;
   if (scrolled > 100 && scrolled > scrollPrev) {
     header.classList.add("out");
+    header.style.backgroundColor = "#01012b"
   } else {
     header.classList.remove("out");
   }

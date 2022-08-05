@@ -1,3 +1,4 @@
+
 var mousePos = { x: 0.5, y: 0.5 };
 document.addEventListener("mousemove", function (event) {
   mousePos = {
@@ -64,13 +65,6 @@ for (var p = 0; p < pitchSegments; p++) {
     particle.position.z = posInBox(
       Math.floor(parentContainer.children.length / Math.pow(side, 2)) % side
     );
-    console.log(
-      side,
-      parentContainer.children.length,
-      particle.position.x,
-      particle.position.y,
-      particle.position.z
-    );
     particle.userData = {
       dests: [dest, particle.position.clone()],
       speed: new THREE.Vector3(),
@@ -79,7 +73,7 @@ for (var p = 0; p < pitchSegments; p++) {
 }
 
 function render() {
-  phase += 0.002;
+  phase += 0.0002;
   for (var i = 0, l = parentContainer.children.length; i < l; i++) {
     var particle = parentContainer.children[i];
     var dest =

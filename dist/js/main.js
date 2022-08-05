@@ -1,6 +1,45 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/blocks/modules/accordion/accordion.js":
+/*!***************************************************!*\
+  !*** ./src/blocks/modules/accordion/accordion.js ***!
+  \***************************************************/
+/***/ (() => {
+
+var checkAccordion = document.querySelector(".accordion");
+
+if (checkAccordion) {
+  var btns = document.querySelectorAll(".accordion__title");
+  var accActive = document.querySelectorAll(".accordion__title");
+  var accTxt = document.querySelectorAll(".accordion__txt");
+  btns.forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      if (!this.classList.contains("acc-active")) {
+        // btns.forEach((btn) => {
+        //   btn.classList.remove("acc-active");
+        // });
+        this.classList.add("acc-active");
+      } else {
+        this.classList.remove("acc-active");
+      }
+    });
+  });
+} // let btns = document.querySelectorAll(".accordion__title");
+// btns.forEach(function (btn) {
+//   btn.addEventListener("click", function () {
+//     if (!this.classList.contains("acc-active")) {
+//       this.classList.add("acc-active");
+//       openHeight;
+//     } else {
+//       this.classList.remove("acc-active");
+//       closeHeight;
+//     }
+//   });
+// });
+
+/***/ }),
+
 /***/ "./src/blocks/modules/footer/footer.js":
 /*!*********************************************!*\
   !*** ./src/blocks/modules/footer/footer.js ***!
@@ -44,6 +83,7 @@ window.addEventListener("scroll", function () {
 
   if (scrolled > 100 && scrolled > scrollPrev) {
     header.classList.add("out");
+    header.style.backgroundColor = "#01012b";
   } else {
     header.classList.remove("out");
   }
@@ -114,7 +154,6 @@ for (var p = 0; p < pitchSegments; p++) {
     particle.position.x = posInBox(parentContainer.children.length % side);
     particle.position.y = posInBox(Math.floor(parentContainer.children.length / side) % side);
     particle.position.z = posInBox(Math.floor(parentContainer.children.length / Math.pow(side, 2)) % side);
-    console.log(side, parentContainer.children.length, particle.position.x, particle.position.y, particle.position.z);
     particle.userData = {
       dests: [dest, particle.position.clone()],
       speed: new THREE.Vector3()
@@ -123,7 +162,7 @@ for (var p = 0; p < pitchSegments; p++) {
 }
 
 function render() {
-  phase += 0.002;
+  phase += 0.0002;
 
   for (var i = 0, l = parentContainer.children.length; i < l; i++) {
     var particle = parentContainer.children[i];
@@ -145,6 +184,114 @@ function render() {
 }
 
 render();
+
+/***/ }),
+
+/***/ "./src/blocks/modules/popups/popups.js":
+/*!*********************************************!*\
+  !*** ./src/blocks/modules/popups/popups.js ***!
+  \*********************************************/
+/***/ (() => {
+
+function modalContent(trigger, item) {
+  var btn = document.querySelectorAll(trigger),
+      pop = document.querySelector(item),
+      close = document.querySelectorAll('.popup-close'),
+      closeBack = document.querySelectorAll('.popup'),
+      activeClass = 'show',
+      hideClass = 'hide';
+
+  function showContent() {
+    pop.classList.add(activeClass);
+    pop.classList.remove(hideClass);
+    document.body.style.overflow = 'hidden';
+    window.dispatchEvent(new CustomEvent('resize'));
+  }
+
+  function hideContent() {
+    pop.classList.remove(activeClass);
+    pop.classList.add(hideClass);
+    document.body.style.overflow = '';
+  }
+
+  function showHideContent(trigger, func) {
+    trigger.forEach(function (item) {
+      item.addEventListener('click', function (e) {
+        if (e.target && e.target.className === item.className) {
+          e.preventDefault();
+          func();
+        }
+      });
+    });
+  }
+
+  showHideContent(btn, showContent);
+  showHideContent(close, hideContent);
+  showHideContent(closeBack, hideContent);
+
+  function hideScroll() {
+    var div = document.createElement('div');
+    document.body.append(div);
+    div.style.width = '50px';
+    div.style.height = '50px';
+    div.style.overflowY = 'scroll';
+    div.style.visibility = 'hidden';
+    var result = div.offsetWidth - div.clientWidth;
+    return result;
+  }
+}
+
+modalContent('.popup-btn', '.popup_main-popup');
+
+/***/ }),
+
+/***/ "./src/blocks/modules/tabs/tabs.js":
+/*!*****************************************!*\
+  !*** ./src/blocks/modules/tabs/tabs.js ***!
+  \*****************************************/
+/***/ (() => {
+
+var tabs = function tabs(headerSelector, tabSelector, contentSelector, activeClass) {
+  var header = document.querySelector(headerSelector),
+      tab = document.querySelectorAll(tabSelector),
+      content = document.querySelectorAll(contentSelector);
+
+  function hideTabContent() {
+    content.forEach(function (item) {
+      item.style.display = "none";
+    });
+    tab.forEach(function (item) {
+      item.classList.remove(activeClass);
+    });
+  }
+
+  function showTabContent() {
+    var i = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
+    content[i].style.display = "block";
+    tab[i].classList.add(activeClass);
+  }
+
+  hideTabContent();
+  showTabContent();
+  header.addEventListener("click", function (e) {
+    var target = e.target;
+
+    if (target && (target.classList.contains(tabSelector.replace(/\./, "")) || target.parentNode.classList.contains(tabSelector.replace(/\./, "")))) {
+      tab.forEach(function (item, i) {
+        if (target == item || target.parentNode == item) {
+          hideTabContent();
+          showTabContent(i);
+        }
+      });
+    }
+  });
+};
+
+var servicesTabs = document.querySelector(".services-tabs");
+
+if (servicesTabs) {
+  tabs(".services-tabs__titles", ".services-tabs__title", ".services-tabs__item", "services-tabs__title_active");
+}
 
 /***/ }),
 
@@ -170,8 +317,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_header_header__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_modules_header_header__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _modules_page1_page1__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! %modules%/page1/page1 */ "./src/blocks/modules/page1/page1.js");
 /* harmony import */ var _modules_page1_page1__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_modules_page1_page1__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _modules_footer_footer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! %modules%/footer/footer */ "./src/blocks/modules/footer/footer.js");
-/* harmony import */ var _modules_footer_footer__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_modules_footer_footer__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _modules_tabs_tabs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! %modules%/tabs/tabs */ "./src/blocks/modules/tabs/tabs.js");
+/* harmony import */ var _modules_tabs_tabs__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_modules_tabs_tabs__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _modules_popups_popups__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! %modules%/popups/popups */ "./src/blocks/modules/popups/popups.js");
+/* harmony import */ var _modules_popups_popups__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_modules_popups_popups__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _modules_accordion_accordion__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! %modules%/accordion/accordion */ "./src/blocks/modules/accordion/accordion.js");
+/* harmony import */ var _modules_accordion_accordion__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_modules_accordion_accordion__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _modules_footer_footer__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! %modules%/footer/footer */ "./src/blocks/modules/footer/footer.js");
+/* harmony import */ var _modules_footer_footer__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_modules_footer_footer__WEBPACK_IMPORTED_MODULE_5__);
+
+
+
 
 
 

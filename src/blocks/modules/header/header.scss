@@ -2,6 +2,7 @@
 .header-container {
   position: relative;
 }
+
 .header {
   position: fixed;
   z-index: 50;
@@ -28,11 +29,6 @@
   text-decoration: none;
   font-size: 42px;
 }
-.header__logo-img {
-  margin-right: auto;
-  display: block;
-  object-fit: contain;
-}
 .header__list {
   display: flex;
   justify-content: space-between;
@@ -42,7 +38,7 @@
 .main-menu__title {
   display: none;
   text-align: left;
-  color: var(--dark-gray);
+  color: var(--sky);
   font-size: 18px;
   font-weight: 500;
 }
@@ -87,7 +83,7 @@
 }
 
 .link-hover:hover {
-  color: var(--orange);
+  color: var(--pink);
 }
 
 
@@ -109,7 +105,7 @@
 }
 
 .header__phone-link:hover {
-  color: var(--orange);
+  color: var(--pink);
 }
 
 .main-menu__contacts-mob {
@@ -130,7 +126,7 @@
   font-weight: 600;
   text-decoration: none;
   margin-top: 15px;
-  color: var(--dark-gray);
+  color: var(--sky);
   font-size: 16px;
 }
 
@@ -185,9 +181,7 @@
     align-items: center;
 }
 
-.main-menu-logo__img {
-  width: 125px;
-}
+
 
 .main-menu-logo__span {
   text-align: center;
@@ -300,7 +294,7 @@
     margin-left: 0;
   }
   .main-menu__li {
-    border-bottom: 1px solid var(--gray);
+    border-bottom: 1px solid var(--pink);
   }
   .overflow-hidden-y {
     overflow-y: hidden;
