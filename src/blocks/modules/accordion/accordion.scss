@@ -46,7 +46,6 @@
   font-size: 15px;
   color: rgba(255, 255, 255, 0.456);
   font-variation-settings: "wght" 500;
-  opacity: 0.75;
 }
 .accordion__title:hover {
   background-color: var(--darken);
@@ -218,5 +217,4 @@
 
 .accordion__price-list-span:first-child {
   font-size: 24px;
-  color: rgba(255, 255, 255, 0.5);
 }
