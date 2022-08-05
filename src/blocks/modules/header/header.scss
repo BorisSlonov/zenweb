@@ -20,7 +20,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 0;
+  padding: 5px 0;
+  
 }
 
 .header__logo {
@@ -78,14 +79,13 @@
 .link-hover {
   position: relative;
   display: block;
-  transition: all .3s;
+  transition: all 0.3s;
   cursor: pointer;
 }
 
 .link-hover:hover {
   color: var(--pink);
 }
-
 
 .header__phone-txt {
   font-family: "Montserrat", sans-serif;
@@ -175,13 +175,11 @@
 }
 
 .main-menu-logo {
-    margin-top: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-
-
 
 .main-menu-logo__span {
   text-align: center;
@@ -333,15 +331,7 @@
   .header__phone-icon {
     width: 30px;
   }
-  .header__burger {
-    order: 1;
-  }
-  .header__logo {
-    order: 2;
-  }
-  .header__callback {
-    order: 2;
-  }
+
   .header__menu {
     display: none;
   }

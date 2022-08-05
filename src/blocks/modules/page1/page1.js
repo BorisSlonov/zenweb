@@ -1,4 +1,3 @@
-
 var mousePos = { x: 0.5, y: 0.5 };
 document.addEventListener("mousemove", function (event) {
   mousePos = {
@@ -26,7 +25,7 @@ var geometry = new THREE.BoxGeometry(boxSize, boxSize, boxSize);
 var materialGreen = new THREE.MeshBasicMaterial({
   transparent: true,
   color: 0xff0000,
-  opacity: 0.4,
+  opacity: 0.35,
   side: THREE.DoubleSide,
 });
 
@@ -95,4 +94,3 @@ function render() {
   requestAnimationFrame(render);
 }
 render();
-

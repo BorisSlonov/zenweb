@@ -13,11 +13,12 @@ canvas {
   left: 0;
   animation-fill-mode: forwards;
   animation: canvasMove 30s;
+  transition: all 12s ease;
 }
 
 @keyframes canvasMove {
   0% {
-    transform: scale(1) translate(0);
+    transform: scale(1.5) translate(0);
   }
   25% {
     transform: scale(1.75) translate(30%, -30%);
@@ -29,7 +30,7 @@ canvas {
     transform: scale(1.75);
   }
   100% {
-    transform: scale(1);
+    transform: scale(1.5);
   }
 }
 

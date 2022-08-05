@@ -1471,7 +1471,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 0;
+  padding: 5px 0;
 }
 
 .header__logo {
@@ -1659,11 +1659,12 @@ canvas {
   left: 0;
   animation-fill-mode: forwards;
   animation: canvasMove 30s;
+  transition: all 12s ease;
 }
 
 @keyframes canvasMove {
   0% {
-    transform: scale(1) translate(0);
+    transform: scale(1.5) translate(0);
   }
 
   25% {
@@ -1679,7 +1680,7 @@ canvas {
   }
 
   100% {
-    transform: scale(1);
+    transform: scale(1.5);
   }
 }
 
@@ -1707,31 +1708,8 @@ canvas {
   overflow: hidden;
 }
 
-.accordion__item::before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  width: 0;
-  transform: scale(0);
-  height: 2px;
-  background-color: var(--pink);
-}
-
 .accordion__item:last-child::before {
   background-color: transparent;
-}
-
-.accordion__item:last-child::before:hover {
-  background-color: var(--sky);
-  transform: scale(1);
-}
-
-.accordion__item:hover .accordion__item::before {
-  background-color: var(--sky);
-  width: 100%;
-  transform: scale(1);
 }
 
 .accordion__title {
@@ -1743,9 +1721,20 @@ canvas {
   transition: all 0.3s;
 }
 
+.accordion__price {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.456);
+  font-variation-settings: "wght" 500;
+  opacity: 0.75;
+}
+
 .accordion__title:hover {
-  background-color: var(--pink);
+  background-color: var(--darken);
   color: #fff;
+}
+
+.accordion__title:hover .accordion__price {
+  color: var(--sky);
 }
 
 .accordion__title::before {
@@ -1789,16 +1778,21 @@ canvas {
   overflow: hidden;
   transform-origin: top;
   max-height: 0;
-  transition: max-height 4s cubic-bezier(0, 1, 0, 1), margin 0.3s ease;
+  transition: max-height 2s cubic-bezier(0, 1, 0, 1), margin 0.1s ease;
   border-left: 1px solid transparent;
+  border-left: 1px solid var(--pink);
+}
+
+.acc-active {
+  background-color: var(--darken);
+  color: #fff;
 }
 
 .acc-active + .accordion__txt {
   max-height: 2000px;
-  transition: max-height 2s ease, margin 0.3s ease;
+  transition: max-height 2s ease, margin 0.1s ease;
   margin-bottom: 20px;
   margin-top: 20px;
-  border-left: 1px solid var(--pink);
 }
 
 .accordion__list {
@@ -1829,6 +1823,59 @@ canvas {
   padding-left: 40px;
 }
 
+.accordion-price-list {
+  list-style: none;
+  margin-top: 20px;
+}
+
+.accordion__price-list-li {
+  position: relative;
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Montserrat";
+}
+
+.accordion__price-list-li:nth-child(1)::before,
+.accordion__price-list-li:nth-child(2)::before,
+.accordion__price-list-li:nth-child(3)::before,
+.accordion__price-list-li:nth-child(4)::before,
+.accordion__price-list-li:nth-child(5)::before,
+.accordion__price-list-li:nth-child(6)::before {
+  content: "1";
+  font-size: 64px;
+  font-family: "Montserrat";
+  margin-right: 20px;
+  color: var(--pink);
+  opacity: 0.5;
+}
+
+.accordion__price-list-li:nth-child(2)::before {
+  content: "2";
+}
+
+.accordion__price-list-li:nth-child(3)::before {
+  content: "3";
+}
+
+.accordion__price-list-li:nth-child(4)::before {
+  content: "4";
+}
+
+.accordion__price-list-li:nth-child(5)::before {
+  content: "5";
+}
+
+.accordion__price-list-li:nth-child(6)::before {
+  content: "6";
+}
+
+.accordion__price-list-span:first-child {
+  font-size: 24px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
 .section-services .accordion {
   margin-left: auto;
   margin-right: auto;
@@ -1843,15 +1890,31 @@ canvas {
   font-variation-settings: "wght" 100;
 }
 
+.section-services .accordion__titleh4 {
+  font-size: 20px;
+}
+
+.section-services .accordion__titleh4 + .accordion__txt {
+  border-left: 1px solid hsla(341deg, 100%, 58%, 0.5);
+}
+
 @media (min-width: 550px) {
   .section-services .accordion__title {
     font-size: 40px;
+  }
+
+  .section-services .accordion__titleh4 {
+    font-size: 30px;
   }
 }
 
 @media (min-width: 1024px) {
   .section-services .accordion__title {
     font-size: 60px;
+  }
+
+  .section-services .accordion__titleh4 {
+    font-size: 36px;
   }
 }
 
@@ -2038,18 +2101,6 @@ canvas {
 
   .header__phone-icon {
     width: 30px;
-  }
-
-  .header__burger {
-    order: 1;
-  }
-
-  .header__logo {
-    order: 2;
-  }
-
-  .header__callback {
-    order: 2;
   }
 
   .header__menu {

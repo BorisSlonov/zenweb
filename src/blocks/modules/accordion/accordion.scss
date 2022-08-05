@@ -26,30 +26,10 @@
   overflow: hidden;
 }
 
-.accordion__item::before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  width: 0;
-  transform: scale(0);
-  height: 2px;
-  background-color: var(--pink);
-}
-
 .accordion__item:last-child::before {
   background-color: transparent;
 }
-.accordion__item:last-child::before:hover {
-  background-color: var(--sky);
-  transform: scale(1);
-}
-.accordion__item:hover .accordion__item::before {
-  background-color: var(--sky);
-  width: 100%;
-  transform: scale(1);
-}
+
 .accordion__title {
   position: relative;
   padding: 40px 0;
@@ -61,9 +41,19 @@
     padding-left: 30px;
   }
 }
+
+.accordion__price {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.456);
+  font-variation-settings: "wght" 500;
+  opacity: 0.75;
+}
 .accordion__title:hover {
-  background-color: var(--pink);
+  background-color: var(--darken);
   color: #fff;
+}
+.accordion__title:hover .accordion__price {
+  color: var(--sky);
 }
 
 .accordion__title::before {
@@ -115,16 +105,20 @@
   overflow: hidden;
   transform-origin: top;
   max-height: 0;
-  transition: max-height 4s cubic-bezier(0, 1, 0, 1), margin 0.3s ease;
+  transition: max-height 2s cubic-bezier(0, 1, 0, 1), margin 0.1s ease;
   border-left: 1px solid transparent;
+  border-left: 1px solid var(--pink);
+}
+.acc-active {
+  background-color: var(--darken);
+  color: #fff;
 }
 
 .acc-active + .accordion__txt {
   max-height: 2000px;
-  transition: max-height 2s ease, margin 0.3s ease;
+  transition: max-height 2s ease, margin 0.1s ease;
   margin-bottom: 20px;
   margin-top: 20px;
-  border-left: 1px solid var(--pink);
 }
 
 //accordion__list
@@ -176,4 +170,53 @@
     font-variation-settings: "wght" 700;
     margin-top: 12px;
   }
+}
+
+.accordion-price-list {
+  list-style: none;
+  margin-top: 20px;
+}
+
+.accordion__price-list-li {
+  position: relative;
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Montserrat";
+}
+
+.accordion__price-list-li:nth-child(1)::before,
+.accordion__price-list-li:nth-child(2)::before,
+.accordion__price-list-li:nth-child(3)::before,
+.accordion__price-list-li:nth-child(4)::before,
+.accordion__price-list-li:nth-child(5)::before,
+.accordion__price-list-li:nth-child(6)::before {
+  content: "1";
+  font-size: 64px;
+  font-family: "Montserrat";
+  margin-right: 20px;
+  color: var(--pink);
+  opacity: 0.5;
+}
+.accordion__price-list-li:nth-child(2)::before {
+  content: "2";
+}
+.accordion__price-list-li:nth-child(3)::before {
+  content: "3";
+}
+.accordion__price-list-li:nth-child(4)::before {
+  content: "4";
+}
+.accordion__price-list-li:nth-child(5)::before {
+  content: "5";
+}
+
+.accordion__price-list-li:nth-child(6)::before {
+  content: "6";
+}
+
+.accordion__price-list-span:first-child {
+  font-size: 24px;
+  color: rgba(255, 255, 255, 0.5);
 }

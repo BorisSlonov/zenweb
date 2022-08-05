@@ -80,12 +80,23 @@ var header = document.querySelector(".header");
 var scrollPrev = 0;
 window.addEventListener("scroll", function () {
   var scrolled = window.pageYOffset;
+  var canvas = document.querySelector("canvas");
 
   if (scrolled > 100 && scrolled > scrollPrev) {
     header.classList.add("out");
     header.style.backgroundColor = "#01012b";
+    this.setTimeout(function () {
+      canvas.style.transform = "scale(1.7)";
+      canvas.style.transition = "12s";
+    }), 12000;
   } else {
     header.classList.remove("out");
+    canvas.style.transform = "scale(2)";
+    canvas.style.transition = "12s";
+    this.setTimeout(function () {
+      canvas.style.transform = "scale(2)";
+      canvas.style.transition = "12s";
+    }), 12000;
   }
 
   scrollPrev = scrolled;
@@ -121,7 +132,7 @@ var geometry = new THREE.BoxGeometry(boxSize, boxSize, boxSize);
 var materialGreen = new THREE.MeshBasicMaterial({
   transparent: true,
   color: 0xff0000,
-  opacity: 0.4,
+  opacity: 0.35,
   side: THREE.DoubleSide
 });
 var pitchSegments = 60;
