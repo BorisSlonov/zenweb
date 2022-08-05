@@ -84,19 +84,13 @@ window.addEventListener("scroll", function () {
 
   if (scrolled > 100 && scrolled > scrollPrev) {
     header.classList.add("out");
-    header.style.backgroundColor = "#01012b";
-    this.setTimeout(function () {
-      canvas.style.transform = "scale(1.7)";
-      canvas.style.transition = "12s";
-    }), 12000;
+    header.style.backgroundColor = "#01012b"; // this.setTimeout(() => {
+    //   canvas.style.transform = "scale(1.7)";
+    //   canvas.style.transition = "6s";
+    // }),
+    //   6000;
   } else {
     header.classList.remove("out");
-    canvas.style.transform = "scale(2)";
-    canvas.style.transition = "12s";
-    this.setTimeout(function () {
-      canvas.style.transform = "scale(2)";
-      canvas.style.transition = "12s";
-    }), 12000;
   }
 
   scrollPrev = scrolled;
