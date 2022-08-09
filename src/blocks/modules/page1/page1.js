@@ -80,8 +80,8 @@ function render() {
         Math.floor(phase) % particle.userData.dests.length
       ].clone();
     var diff = dest.sub(particle.position);
-    particle.userData.speed.divideScalar(1.02); // Some drag on the speed
-    particle.userData.speed.add(diff.divideScalar(400)); // Modify speed by a fraction of the distance to the dest
+    particle.userData.speed.divideScalar(1.1); // Some drag on the speed
+    particle.userData.speed.add(diff.divideScalar(1400)); // Modify speed by a fraction of the distance to the dest
     particle.position.add(particle.userData.speed);
     particle.lookAt(dest);
   }

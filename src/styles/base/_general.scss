@@ -67,18 +67,10 @@ h4 {
 h1 {
   position: relative;
   font-size: 12vw;
-  line-height: 1 !important;
+  line-height: 1;
   color: #fff;
 }
 
-h1 span:first-child::after {
-  content: "↑";
-  position: absolute;
-  right: 0;
-  top: 0;
-  transition: all 0.3s;
-  animation: arrowMain 3s infinite;
-}
 @keyframes arrowMain {
   0% {
     transform: translateY(0);

@@ -1215,17 +1215,8 @@ h4 {
 h1 {
   position: relative;
   font-size: 12vw;
-  line-height: 1 !important;
+  line-height: 1;
   color: #fff;
-}
-
-h1 span:first-child::after {
-  content: "↑";
-  position: absolute;
-  right: 0;
-  top: 0;
-  transition: all 0.3s;
-  animation: arrowMain 3s infinite;
 }
 
 @keyframes arrowMain {
@@ -1475,6 +1466,8 @@ img {
 }
 
 .header__logo {
+  font-family: "Montserrat";
+  line-height: 1;
   color: #fff;
   text-transform: uppercase;
   text-decoration: none;
@@ -1714,16 +1707,15 @@ canvas {
 
 .accordion__title {
   position: relative;
-  padding: 40px 0;
+  padding: 40px;
   font-variation-settings: "wght" 500;
-  padding-left: 40px;
   cursor: pointer;
   transition: all 0.3s;
 }
 
 .accordion__price {
   font-size: 15px;
-  color: rgba(255, 255, 255, 0.456);
+  color: rgba(255, 255, 255, 0.9);
   font-variation-settings: "wght" 500;
 }
 
@@ -1785,6 +1777,11 @@ canvas {
 
 .acc-active {
   background-color: var(--darken);
+  color: #fff;
+}
+
+.acc-active .accordion__price {
+  color: var(--sky);
 }
 
 .acc-active + .accordion__txt {
@@ -1871,6 +1868,14 @@ canvas {
   content: "6";
 }
 
+.accordion__price-list-li:nth-child(7)::before {
+  content: "7";
+}
+
+.accordion__price-list-li:nth-child(8)::before {
+  content: "8";
+}
+
 .accordion__price-list-span:first-child {
   font-size: 24px;
 }
@@ -1886,7 +1891,7 @@ canvas {
 
 .section-services .accordion__title {
   font-size: 30px;
-  font-variation-settings: "wght" 100;
+  font-variation-settings: "wght" 200;
 }
 
 .section-services .accordion__titleh4 {
@@ -1935,23 +1940,6 @@ canvas {
   h1 span:first-child::after {
     display: none;
   }
-
-  .main-menu__li:not(:first-child) {
-    margin-left: 20px;
-  }
-
-  .dropdown-link,
-  .header__link {
-    font-size: 16px;
-  }
-
-  .header__callback {
-    max-width: 35%;
-  }
-
-  .header__logo {
-    max-width: 240px;
-  }
 }
 
 @media (max-width: 1023px) {
@@ -1960,7 +1948,7 @@ canvas {
   }
 
   .header__login-wrapper {
-    order: 2;
+    display: none;
   }
 
   .header__menu {
@@ -1990,21 +1978,12 @@ canvas {
     flex-direction: column;
     align-items: flex-start;
     overflow: auto;
-    background-color: #fff;
     transition: all 0.3s;
+    background-color: var(--darken);
   }
 
   .main-menu {
     position: relative;
-  }
-
-  .main-menu__title {
-    position: relative;
-    z-index: 20000;
-  }
-
-  .burger_active + .header__menu .main-menu__title {
-    display: block;
   }
 
   .main-menu__list {
@@ -2024,23 +2003,14 @@ canvas {
     width: 100%;
   }
 
-  .main-menu__contacts-mob {
-    display: block;
-    margin-top: auto;
-    width: 100%;
-    margin-top: 20px;
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-
   .header__link {
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     font-size: 18px;
     width: 100%;
     display: block;
     font-weight: 500;
-    color: rgba(10, 9, 13, 0.5);
+    color: #fff;
   }
 
   .link-hover::after {
@@ -2067,39 +2037,9 @@ canvas {
 
   .header__burger {
     display: block;
+    position: relative;
     z-index: 1100;
     width: 25px;
-  }
-
-  .header__callback {
-    display: none;
-  }
-
-  .header__login-txt {
-    display: none;
-  }
-
-  .header__logo-img {
-    max-width: 100px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .header__login-icon {
-    width: 32px;
-    height: 32px;
-  }
-
-  .header__phone-span {
-    display: none;
-  }
-
-  .header__phone-txt {
-    display: none;
-  }
-
-  .header__phone-icon {
-    width: 30px;
   }
 
   .header__menu {
@@ -2118,21 +2058,26 @@ canvas {
     order: 3;
   }
 
-  .header__callback {
-    width: auto;
-    max-width: 30px;
-  }
-
   .header__burger span {
     display: block;
-    height: 4px;
-    width: 24px;
-    background-color: var(--black);
+    height: 2px;
+    width: 36px;
+    background-color: #fff;
     border-radius: 2px;
+    transition: all 0.3s;
   }
 
   .header__burger span:not(:first-child) {
-    margin-top: 4px;
+    margin-top: 6px;
+  }
+
+  .header__burger span:nth-child(2) {
+    width: 70%;
+    left: 0;
+  }
+
+  .header__burger:hover span:nth-child(2) {
+    transform: translateX(100%);
   }
 
   .burger_active.header__burger span:not(first-child) {
@@ -2147,8 +2092,8 @@ canvas {
   .burger_active span:nth-child(1) {
     transform: rotate(-45deg);
     margin-bottom: -11px;
-    background-color: var(--red);
     height: 2px;
+    background-color: var(--pink);
   }
 
   .burger_active span:nth-child(2) {
@@ -2158,8 +2103,8 @@ canvas {
   .burger_active span:nth-child(3) {
     transform: rotate(45deg);
     margin-bottom: 20px;
-    background-color: var(--red);
     height: 2px;
+    background-color: var(--pink);
   }
 }
 

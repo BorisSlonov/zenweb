@@ -32,9 +32,8 @@
 
 .accordion__title {
   position: relative;
-  padding: 40px 0;
+  padding: 40px;
   font-variation-settings: "wght" 500;
-  padding-left: 40px;
   cursor: pointer;
   transition: all 0.3s;
   @media (max-width: 550px) {
@@ -44,7 +43,7 @@
 
 .accordion__price {
   font-size: 15px;
-  color: rgba(255, 255, 255, 0.456);
+  color: rgba(255, 255, 255, 0.9);
   font-variation-settings: "wght" 500;
 }
 .accordion__title:hover {
@@ -107,11 +106,17 @@
   transition: max-height 2s cubic-bezier(0, 1, 0, 1), margin 0.1s ease;
   border-left: 1px solid transparent;
   border-left: 1px solid var(--pink);
-  color:#fff;
+  color: #fff;
 }
 .acc-active {
   background-color: var(--darken);
+  color: #fff;
+
 }
+.acc-active .accordion__price {
+  color: var(--sky);
+}
+
 
 .acc-active + .accordion__txt {
   max-height: 2000px;
@@ -211,11 +216,15 @@
 .accordion__price-list-li:nth-child(5)::before {
   content: "5";
 }
-
 .accordion__price-list-li:nth-child(6)::before {
   content: "6";
 }
-
+.accordion__price-list-li:nth-child(7)::before {
+  content: "7";
+}
+.accordion__price-list-li:nth-child(8)::before {
+  content: "8";
+}
 .accordion__price-list-span:first-child {
   font-size: 24px;
 }
