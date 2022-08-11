@@ -179,6 +179,8 @@ img {
 }
 
 .main {
+  position: relative;
+  z-index: 10;
   display: block;
 }
 
