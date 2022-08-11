@@ -1,0 +1,44 @@
+.main-form {
+  &__item {
+    display: flex;
+    flex-direction: column;
+    &:not(:first-child) {
+      margin-top: 20px;
+    }
+    &:last-child {
+      margin-top: 40px;
+    }
+  }
+
+  &__input {
+    background-color: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid var(--sky);
+    padding: 10px;
+    color: var(--sky);
+    &:focus,
+    &:active {
+      border-color: var(--pink);
+    }
+  }
+  &__txtarea {
+    background-color: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid var(--sky);
+    padding: 10px 10px 15px;
+    color: var(--sky);
+    resize: none;
+    &:focus,
+    &:active {
+      border-color: var(--pink);
+    }
+  }
+
+  @media(max-width:767px) {
+    .btn {
+        width: 100%;
+    }
+  }
+}

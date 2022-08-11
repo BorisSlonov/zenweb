@@ -110,14 +110,21 @@
 
 .main-menu__contacts-mob {
   display: none;
+  @media(max-width:1023px) {
+    width: 100%;
+  }
 }
 
 .main-menu__contacts-mob-phone {
   text-align: center;
-  color: var(--black);
   margin-top: 10px;
   font-size: 14px;
-  border-top: 1px solid var(--border);
+  @media(max-width:1023px) {
+    width: 100%;
+    .btn {
+      width: 100%;
+    }
+  }
 }
 .main-menu__contacts-mob-num {
   display: flex;
@@ -179,12 +186,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.main-menu-logo__span {
-  text-align: center;
-  font-size: 16px;
-  margin-top: 10px;
+  color: #fff;
+  font-family: "Montserrat";
+  font-size: 40px;
+  margin-bottom: 20px;
 }
 
 @media (max-width: 1023px) {
@@ -212,7 +217,8 @@
     top: 0;
     left: -100%;
     width: 100%;
-    height: 100%;
+    height: 100vh;
+    max-height: 100vh;
     font-size: 18px;
     flex-direction: column;
     align-items: flex-start;
@@ -222,6 +228,17 @@
   }
   .main-menu {
     position: relative;
+  }
+
+  .main-menu__contacts-mob {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 250px;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .main-menu__list {
@@ -258,7 +275,11 @@
     margin-left: 0;
   }
   .main-menu__li {
-    border-bottom: 1px solid var(--pink);
+    border-bottom: 1px solid var(--sky);
+    transition: all 0.3s;
+    &:hover {
+      border-color: var(--pink);
+    }
   }
   .overflow-hidden-y {
     overflow-y: hidden;
