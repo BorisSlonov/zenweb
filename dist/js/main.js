@@ -167,7 +167,7 @@ for (var p = 0; p < pitchSegments; p++) {
 }
 
 function render() {
-  phase += 0.0004;
+  phase += 0.0006;
 
   for (var i = 0, l = parentContainer.children.length; i < l; i++) {
     var particle = parentContainer.children[i];
