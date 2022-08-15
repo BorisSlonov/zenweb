@@ -125,7 +125,7 @@ var boxSize = 0.2;
 var geometry = new THREE.BoxGeometry(boxSize, boxSize, boxSize);
 var materialGreen = new THREE.MeshBasicMaterial({
   transparent: true,
-  color: 0xff0000,
+  color: 0x005678,
   opacity: 0.35,
   side: THREE.DoubleSide
 });
@@ -170,15 +170,21 @@ function render() {
   phase += 0.0006;
 
   for (var i = 0, l = parentContainer.children.length; i < l; i++) {
-    var particle = parentContainer.children[i];
-    var dest = particle.userData.dests[Math.floor(phase) % particle.userData.dests.length].clone();
-    var diff = dest.sub(particle.position);
-    particle.userData.speed.divideScalar(1.01); // Some drag on the speed
+    var _particle = parentContainer.children[i];
 
-    particle.userData.speed.add(diff.divideScalar(1200)); // Modify speed by a fraction of the distance to the dest
+    var _dest = _particle.userData.dests[Math.floor(phase) % _particle.userData.dests.length].clone();
 
-    particle.position.add(particle.userData.speed);
-    particle.lookAt(dest);
+    var diff = _dest.sub(_particle.position);
+
+    _particle.userData.speed.divideScalar(1.01); // Some drag on the speed
+
+
+    _particle.userData.speed.add(diff.divideScalar(1200)); // Modify speed by a fraction of the distance to the dest
+
+
+    _particle.position.add(_particle.userData.speed);
+
+    _particle.lookAt(_dest);
   }
 
   parentContainer.rotation.y = phase * 3;
