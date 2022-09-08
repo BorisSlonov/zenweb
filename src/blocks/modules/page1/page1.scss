@@ -29,24 +29,24 @@ canvas {
   left: 0;
   animation-fill-mode: forwards;
   animation: canvasMove 40s;
-  transform: scale(1.5) translate(0);
+  transform: scale(1.1) translate(0);
 }
 
-@keyframes canvasMove {
-  0% {
-    transform: scale(1.5) translate(0);
-  }
-  25% {
-    transform: scale(1.75) translate(30%, -30%);
-  }
-  50% {
-    transform: scale(2.25);
-  }
-  75% {
-    transform: scale(1.75);
-  }
-  100% {
-    transform: scale(1.5);
-  }
-}
+// @keyframes canvasMove {
+//   0% {
+//     transform: scale(1.5);
+//   }
+//   25% {
+//     transform: scale(1.75);
+//   }
+//   50% {
+//     transform: scale(2.25);
+//   }
+//   75% {
+//     transform: scale(1.75);
+//   }
+//   100% {
+//     transform: scale(1.5);
+//   }
+// }
 

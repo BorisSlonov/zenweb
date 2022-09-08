@@ -1,20 +1,20 @@
 let mousePos = { x: 0.5, y: 0.5 };
-document.addEventListener("mousemove", function (event) {
-  mousePos = {
-    x: event.clientX / window.innerWidth,
-    y: event.clientY / window.innerHeight,
-  };
-});
+// document.addEventListener("mousemove", function (event) {
+//   // mousePos = {
+//   //   x: event.clientX / window.innerWidth,
+//   //   y: event.clientY / window.innerHeight,
+//   // };
+// });
 let phase = 0;
 
 let scene = new THREE.Scene();
 let camera = new THREE.PerspectiveCamera(
-  95,
+  50,
   window.innerWidth / window.innerHeight,
   0.1,
-  1000
+  2000
 );
-camera.position.z = 30;
+camera.position.z = 25;
 
 let renderer = new THREE.WebGLRenderer();
 renderer.setSize(window.innerWidth, window.innerHeight);
@@ -24,7 +24,7 @@ let boxSize = 0.2;
 let geometry = new THREE.BoxGeometry(boxSize, boxSize, boxSize);
 let materialGreen = new THREE.MeshBasicMaterial({
   transparent: true,
-  color: 0x005678,
+  color: 0xff2a6d,
   opacity: 0.35,
   side: THREE.DoubleSide,
 });
@@ -34,7 +34,7 @@ let elevationSegments = pitchSegments / 2;
 let particles = pitchSegments * elevationSegments;
 let side = Math.pow(particles, 1 / 3);
 
-let radius = 16;
+let radius = 18;
 
 let parentContainer = new THREE.Object3D();
 scene.add(parentContainer);
@@ -72,7 +72,7 @@ for (let p = 0; p < pitchSegments; p++) {
 }
 
 function render() {
-  phase += 0.0006;
+  phase += 0.0001;
   for (let i = 0, l = parentContainer.children.length; i < l; i++) {
     let particle = parentContainer.children[i];
     let dest =
@@ -80,8 +80,8 @@ function render() {
         Math.floor(phase) % particle.userData.dests.length
       ].clone();
     let diff = dest.sub(particle.position);
-    particle.userData.speed.divideScalar(1.01); // Some drag on the speed
-    particle.userData.speed.add(diff.divideScalar(1200)); // Modify speed by a fraction of the distance to the dest
+    particle.userData.speed.divideScalar(1.025); // Some drag on the speed
+    particle.userData.speed.add(diff.divideScalar(1300)); // Modify speed by a fraction of the distance to the dest
     particle.position.add(particle.userData.speed);
     particle.lookAt(dest);
   }
@@ -94,5 +94,3 @@ function render() {
   requestAnimationFrame(render);
 }
 render();
-
-

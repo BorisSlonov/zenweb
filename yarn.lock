@@ -2456,6 +2456,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"animate.css@npm:^4.1.1":
+  version: 4.1.1
+  resolution: "animate.css@npm:4.1.1"
+  checksum: c7eb91540423532c549725a6dedea993735a05eadaa49ed4d1965ce166a6db36459adcc9667c1dfe13657fab92a2875bbee34ad0d942444a731badab69f762c8
+  languageName: node
+  linkType: hard
+
 "ansi-colors@npm:1.1.0, ansi-colors@npm:^1.0.1":
   version: 1.1.0
   resolution: "ansi-colors@npm:1.1.0"
@@ -7645,6 +7652,7 @@ bem-tools-create@bem-tools/bem-tools-create:
     "@babel/eslint-parser": ^7.17.0
     "@babel/preset-env": ^7.16.11
     "@babel/register": ^7.17.0
+    animate.css: ^4.1.1
     babel-loader: ^8.2.3
     bem-tools-core: bem-tools/bem-tools-core
     bem-tools-create: bem-tools/bem-tools-create
@@ -7686,12 +7694,14 @@ bem-tools-create@bem-tools/bem-tools-create:
     postcss-scss: ^4.0.3
     require-dir: ^1.2.0
     sass: ^1.49.9
+    scroll-out: ^2.2.12
+    splitting: ^1.0.6
     stylelint: ^14.5.3
     stylelint-config-standard-scss: ^3.0.0
     stylelint-order: ^5.0.0
     stylelint-selector-bem-pattern: ^2.1.1
     swiper: ^8.3.2
-    three: ^0.143.0
+    three: ^0.144.0
     webpack: ^5.70.0
     webpack-stream: ^7.0.0
     yargs: ^17.3.1
@@ -13036,6 +13046,13 @@ bem-tools-create@bem-tools/bem-tools-create:
   languageName: node
   linkType: hard
 
+"scroll-out@npm:^2.2.12":
+  version: 2.2.12
+  resolution: "scroll-out@npm:2.2.12"
+  checksum: f67b865dc8bd23ca4786ebf49e66ced96613d05c5c6a00400c360da3090ba34df0a3fb4015039227323c727293a9ca5ce210b1b076924ee82f82b9eb4c2a0289
+  languageName: node
+  linkType: hard
+
 "seek-bzip@npm:^1.0.3, seek-bzip@npm:^1.0.5":
   version: 1.0.6
   resolution: "seek-bzip@npm:1.0.6"
@@ -13640,6 +13657,13 @@ bem-tools-create@bem-tools/bem-tools-create:
   dependencies:
     extend-shallow: ^3.0.0
   checksum: ae5af5c91bdc3633628821bde92fdf9492fa0e8a63cf6a0376ed6afde93c701422a1610916f59be61972717070119e848d10dfbbd5024b7729d6a71972d2a84c
+  languageName: node
+  linkType: hard
+
+"splitting@npm:^1.0.6":
+  version: 1.0.6
+  resolution: "splitting@npm:1.0.6"
+  checksum: 92460978f3757b1756907e4cf855a8ee6691ee35c552165fff6d33790374f6f645d20a57fb2dcba678208f7810adb559da943a55277d10e85cc924ff6f7c976b
   languageName: node
   linkType: hard
 
@@ -14553,10 +14577,10 @@ bem-tools-create@bem-tools/bem-tools-create:
   languageName: node
   linkType: hard
 
-"three@npm:^0.143.0":
-  version: 0.143.0
-  resolution: "three@npm:0.143.0"
-  checksum: 6fe8793a04a931c8fb86bad566ac4310a6243c9e9139678b5084e0773457a63fe254109479c4d4a2b484812d0932940eabf9baa21749c8c8d8dceb2815ca747b
+"three@npm:^0.144.0":
+  version: 0.144.0
+  resolution: "three@npm:0.144.0"
+  checksum: 6fb1afb3d189fede913c17e05ad17f3e653370eb3f1030b94a1cc49e84be1e45ea50a340c87289ff30f9bf90a87d04fcdc507577c7c5b062ff730b942f8a16ea
   languageName: node
   linkType: hard
 

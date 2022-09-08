@@ -1,3 +1,6 @@
+import ScrollOut from "scroll-out";
+import Splitting from "Splitting";
+
 //burger
 window.addEventListener("DOMContentLoaded", () => {
   const menu = document.querySelector(".header__list"),
@@ -38,3 +41,13 @@ window.addEventListener("scroll", function () {
   }
   scrollPrev = scrolled;
 });
+
+window.onload = function () {
+  document.querySelector('body').style.display = 'flex';
+  Splitting();
+  ScrollOut({
+    targets: ".word",
+    scrollingElement: "body",
+  });
+  document.querySelector(".body").classList.remove("scroll-block");
+};

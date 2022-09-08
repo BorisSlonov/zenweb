@@ -96,10 +96,59 @@
       href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <style>
+      .scroll-block {
+        overflow-y: hidden;
+      }
+
+      .loader {
+        width: 100%;
+        height: 100%;
+        background-color: var(--black);
+        position: absolute;
+        top: 0;
+        left: 0;
+        animation: loader 0.75s 2s ease-in forwards;
+        z-index: 99;
+      }
+      .progress-bar {
+        width: 320px;
+        height: 2px;
+        background-color: var(--darken);
+        position: relative;
+        top: calc(50% - 1px);
+        left: calc(50% - 160px);
+      }
+      .progress-bar:before {
+        content: "";
+        display: block;
+        width: 8px;
+        height: 5px;
+        position: absolute;
+        animation: progress 2.75s ease-in-out forwards;
+      }
+
+      @keyframes loader {
+        to {
+          left: -100vw;
+        }
+      }
+      @keyframes progress {
+        to {
+          border-left: 320px solid var(--pink);
+        }
+      }
+    </style>
+   
     <link rel="stylesheet" href="styles/main.css" />
   </head>
-  <body>
-    <header class="header">
+  <body class="body scroll-block">
+    <div class="loader">
+  <div class="progress-bar">
+    
+  </div>
+</div>
+<header class="header">
   <div class="container">
     <div class="header__body">
       <!-- logo -->
@@ -160,10 +209,10 @@
   <section class="section-page1">
   <div class="container">
     <div class="page1">
-      <h1>
-        <span>zenweb</span> <br />
-        <span>клиенты </span> <br>
-        <span> из интернета </span>
+      <h1 class="text text--karaoke" data-scroll="out" data-splitting="">
+        zenweb <br />
+        дизайн & <br />
+        разработка
       </h1>
       <a href="#" class="btn popup-btn">связаться</a>
     </div>
@@ -172,7 +221,7 @@
 
   <section class="section section-about-us">
   <div class="container">
-    <h2 class="main-h2 main-h2_about-us">
+    <h2 class="main-h2 main-h2_about-us text text--karaoke"  data-scroll="out" data-splitting="">
         <span class="main-h2__span">
             о нас
         </span>
