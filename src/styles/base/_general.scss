@@ -4,7 +4,7 @@
 
 html,
 body {
-  font-family: 'Anonymous Pro', monospace;
+  font-family: "Anonymous Pro", monospace;
   font-size: 18px;
   color: var(--sky);
   line-height: 1.6;
@@ -17,6 +17,10 @@ body {
   flex-direction: column;
   scroll-behavior: smooth;
   overflow-x: hidden;
+}
+.main-wrapper {
+  display: flex;
+  flex-direction: column;
 }
 body::-webkit-scrollbar {
   width: 5px;
@@ -68,13 +72,13 @@ h1 {
   font-size: 11vw;
   line-height: 1;
   color: rgba(255, 255, 255, 0);
-  @media(max-width:1023px) {
+  @media (max-width: 1023px) {
     font-size: 80px;
   }
-  @media(max-width:767px) {
+  @media (max-width: 767px) {
     font-size: 60px;
   }
-  @media(max-width:550px) {
+  @media (max-width: 550px) {
     font-size: 40px;
   }
 }
@@ -84,24 +88,103 @@ h1 {
   font-size: 120px;
   margin-bottom: 80px;
   color: #fff;
+  @media(max-width:767px) {
+    font-size: 42px;
+  }
   &__span {
     position: relative;
     z-index: 2;
   }
   &_about-us {
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       z-index: 1;
       left: 0;
       top: 0;
       width: 200px;
       height: 200px;
-      background-image: url('../img/splash/Neon03.png');
+      background-image: url("../img/splash/Neon03.png");
       background-position: 50% 50%;
       background-size: contain;
       background-repeat: no-repeat;
       transform: rotate(-124deg);
+      @media(max-width:767px) {
+        left: -10%;
+        top: -100%;
+        transform: rotate(60deg);
+      }
+      @media(max-width:425px) {
+        left: -30%;
+      }
+    }
+  }
+  &_services {
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 200px;
+      height: 200px;
+      background-image: url("../img/splash/Neon02.png");
+      background-position: 50% 50%;
+      background-size: contain;
+      background-repeat: no-repeat;
+      @media(max-width:767px) {
+        left: -10%;
+        top: -100%;
+      }
+      @media(max-width:425px) {
+        left: -30%;
+      }
+    }
+  }
+  &_portfolio {
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 200px;
+      height: 200px;
+      background-image: url("../img/splash/Dark02.png");
+      background-position: 50% 50%;
+      background-size: contain;
+      background-repeat: no-repeat;
+      transform: rotate(-124deg);
+      @media(max-width:767px) {
+        left: -10%;
+        top: -100%;
+      }
+      @media(max-width:425px) {
+        left: -30%;
+      }
+    }
+  }
+  &_contacts {
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 200px;
+      height: 200px;
+      background-image: url("../img/splash/Dark01.png");
+      background-position: 50% 50%;
+      background-size: contain;
+      background-repeat: no-repeat;
+      transform: rotate(-124deg);
+      @media(max-width:767px) {
+        left: -10%;
+        top: -100%;
+      }
+      @media(max-width:425px) {
+        left: -30%;
+      }
     }
   }
 }
@@ -139,8 +222,6 @@ img {
   color: #f2f2f2;
 }
 
-
-
 .section {
   padding-top: 160px;
 }
@@ -160,7 +241,7 @@ img {
 .main-btn {
   display: inline-block;
   padding: 15px 30px;
-  font-family: 'Anonymous Pro', monospace;
+  font-family: "Anonymous Pro", monospace;
   font-weight: 700;
   text-transform: uppercase;
   color: var(--sky);

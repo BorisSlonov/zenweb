@@ -92,26 +92,34 @@ window.addEventListener("scroll", function () {
 
   if (scrolled > 100 && scrolled > scrollPrev) {
     header.classList.add("out");
-    header.style.backgroundColor = "#01012b"; // this.setTimeout(() => {
-    //   canvas.style.transform = "scale(1.7)";
-    //   canvas.style.transition = "6s";
-    // }),
-    //   6000;
+    header.style.backgroundColor = "#01012b";
   } else {
     header.classList.remove("out");
   }
 
   scrollPrev = scrolled;
+
+  if (scrolled > Math.round(window.innerHeight)) {
+    canvas.style.opacity = "0.5";
+  } else {
+    canvas.style.opacity = "1";
+  }
 });
 
 window.onload = function () {
-  document.querySelector('body').style.display = 'flex';
+  location.href = "#";
   Splitting__WEBPACK_IMPORTED_MODULE_1___default()();
   scroll_out__WEBPACK_IMPORTED_MODULE_0___default()({
     targets: ".word",
-    scrollingElement: "body"
+    once: true
   });
   document.querySelector(".body").classList.remove("scroll-block");
+  document.querySelector("body").style.display = "flex";
+  setTimeout(function () {
+    document.querySelectorAll("h1 .word").forEach(function (i) {
+      i.setAttribute("data-scroll", "in");
+    });
+  }, 2400);
 };
 
 /***/ }),

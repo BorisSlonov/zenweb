@@ -31,23 +31,32 @@ window.addEventListener("scroll", function () {
   if (scrolled > 100 && scrolled > scrollPrev) {
     header.classList.add("out");
     header.style.backgroundColor = "#01012b";
-    // this.setTimeout(() => {
-    //   canvas.style.transform = "scale(1.7)";
-    //   canvas.style.transition = "6s";
-    // }),
-    //   6000;
   } else {
     header.classList.remove("out");
   }
   scrollPrev = scrolled;
+
+  if (scrolled > Math.round(window.innerHeight)) {
+    canvas.style.opacity = "0.5";
+  } else {
+    canvas.style.opacity = "1";
+  }
 });
 
 window.onload = function () {
-  document.querySelector('body').style.display = 'flex';
+  location.href = "#";
   Splitting();
   ScrollOut({
     targets: ".word",
-    scrollingElement: "body",
+    once: true,
   });
+
   document.querySelector(".body").classList.remove("scroll-block");
+  document.querySelector("body").style.display = "flex";
+
+  setTimeout(() => {
+    document.querySelectorAll("h1 .word").forEach((i) => {
+      i.setAttribute("data-scroll", "in");
+    });
+  }, 2400);
 };
