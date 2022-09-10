@@ -29,6 +29,9 @@
   text-transform: uppercase;
   text-decoration: none;
   font-size: 42px;
+  @media(max-width:550px) {
+    font-size: 36px;
+  }
 }
 .header__list {
   display: flex;
@@ -293,7 +296,6 @@
     display: block;
     position: relative;
     z-index: 1100;
-    width: 25px;
   }
 
   .header__menu {

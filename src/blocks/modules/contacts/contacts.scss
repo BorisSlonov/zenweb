@@ -1,9 +1,10 @@
 .contacts {
   position: relative;
   display: flex;
+  padding-bottom: 60px;
   justify-content: space-between;
-  align-items: flex-end;
-  @media (max-width: 767px) {
+  align-items: center;
+  @media (max-width: 555px) {
     flex-direction: column;
     align-items: flex-start;
   }
@@ -11,27 +12,21 @@
 .contacts__item {
   display: flex;
   flex-direction: column;
-  font-size: 72px;
+  font-size: 42px;
   @media (max-width: 1023px) {
-    font-size: 48px;
+    font-size: 32px;
   }
   @media (max-width: 767px) {
     font-size: 24px;
   }
 }
-.contacts__item:first-child {
-    @media (max-width: 767px) {
-        padding-bottom: 120px;
-      }
-}
+
 .contacts__item:last-child {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  @media (max-width: 767px) {
-    right: 50%;
-    transform: translateX(50%);
-    bottom: -45%;
+  margin-left: 40px;
+  flex-basis: 50%;
+   @media (max-width: 555px) {
+    margin-left: 0;
+    margin-top: 30px;
   }
 }
 .contacts-items__item {
@@ -45,33 +40,4 @@
 }
 .contacts-items__item:not(:first-child) {
   margin-top: 20px;
-}
-.globe {
-  border: 2px solid var(--pink);
-  border-radius: 50%;
-  height: 140px;
-  overflow: hidden;
-  transform: translate(-50%, -50%) scale(2);
-  width: 140px;
-  @media(max-width:767px) {
-    transform: translate(0) scale(2);
-  }
-
-  svg {
-    animation: rotation 15s linear 0s infinite;
-
-    path {
-      stroke: var(--pink);
-    }
-  }
-}
-
-@keyframes rotation {
-  from {
-    transform: translateX(0);
-  }
-
-  from {
-    transform: translateX(-50%);
-  }
 }
