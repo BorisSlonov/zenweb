@@ -27,7 +27,7 @@ gulp.task("images", () => {
             }),
             imageminPngquant({
                 speed: 5,
-                quality: [0.6, 0.8]
+                quality: [0.7, 0.8]
             }),
             imageminZopfli({
                 more: true
