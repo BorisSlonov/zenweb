@@ -39,6 +39,11 @@
   &:hover {
     color: var(--pink);
   }
+  img {
+    display: block;
+    width: 24px;
+    height: 24px;
+  }
 }
 .contacts-items__item:not(:first-child) {
   margin-top: 20px;
