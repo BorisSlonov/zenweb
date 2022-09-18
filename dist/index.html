@@ -1,3 +1,4 @@
+<!-- Привет! На собеседование пришли скрин этого комментария и получи +10% к выплатам<3 -->
 <!DOCTYPE html>
 <html lang="ru">
   <head>
@@ -105,7 +106,7 @@
         width: 100%;
         height: 100%;
         background-color: var(--black);
-        position: absolute;
+        position: fixed;
         top: 0;
         left: 0;
         animation: loader 0.75s 2s ease-in forwards;
@@ -169,18 +170,18 @@
           <div class="header__list">
             <ul class="main-menu__list">
               <li class="main-menu__li">
-                <a href="/page-services.html" class="header__link link-hover"> О нас </a>
+                <a href="#about-us" class="header__link link-hover"> О нас </a>
               </li>
               <li class="main-menu__li">
-                <a href="/page-services.html" class="header__link link-hover"> Услуги </a>
+                <a href="#services" class="header__link link-hover"> Услуги </a>
               </li>
               <li class="main-menu__li">
-                <a href="/page-prices.html" class="header__link link-hover">
+                <a href="#portfolio" class="header__link link-hover">
                   Работы
                 </a>
               </li>
               <li class="main-menu__li">
-                <a href="/page-contacts.html" class="header__link link-hover"> Контакты </a>
+                <a href="#contacts" class="header__link link-hover"> Контакты </a>
               </li>
             </ul>
             <div class="main-menu__contacts-mob">
@@ -220,10 +221,10 @@
   </div>
 </section>
 
-  <section class="section section-about-us">
+  <section class="section section-about-us" id="about-us">
   <div class="container">
     <h2
-      class="main-h2 main-h2_about-us text text--karaoke"
+      class="main-h2 main-h2_about-us text text--turning"
       data-scroll="out"
       data-splitting=""
     >
@@ -268,15 +269,15 @@
   </div>
 </section>
 
-  <section class="section section-services">
+  <section class="section section-services" id="services">
   <div class="container">
     <h2
-    class="main-h2 main-h2_services text text--karaoke"
-    data-scroll="out"
-    data-splitting=""
-  >
-    <span class="main-h2__span"> услуги </span>
-  </h2>
+      class="main-h2 main-h2_services text text--turning"
+      data-scroll="out"
+      data-splitting=""
+    >
+      <span class="main-h2__span"> услуги </span>
+    </h2>
     <div class="accordion">
       <div class="accordion__item">
         <h3 class="accordion__title">
@@ -285,133 +286,14 @@
           <span class="accordion__price">Уникальное онлайн оформление</span>
         </h3>
         <div class="accordion__txt">
-          Оставьте свои контакты или свяжитесь с нами сами <br>
-          <a href="#" class="btn popup-btn" style="margin-top: 15px">связаться</a>
+          <a href="#" class="btn popup-btn" style="margin-top: 15px"
+            >связаться</a
+          >
           <div class="accordion-price-list">
-            <div class="accordion">
-              <div class="accordion__item">
-                <h3 class="accordion__title accordion__titleh4">
-                  Сайт-каталог
-                  <br />
-                  <span class="accordion__price"
-                    >Отлично подойдет для подробного рассказа о вашей
-                    компании</span
-                  >
-                </h3>
-                <div class="accordion__txt">
-                  Дизайн и разработка, стырь по шагам где расписано и
-                  откопирайти плз.
-                  <ul class="accordion-price-list">
-                    <li class="accordion__price-list-li">
-                      <span class="accordion__price-list-span"> 2 дня </span>
-                      <span class="accordion__price-list-span"> Брифинг </span>
-                    </li>
-                    <li class="accordion__price-list-li">
-                      <span class="accordion__price-list-span"> 2 дня </span>
-                      <span class="accordion__price-list-span"> Брифинг </span>
-                    </li>
-                    <li class="accordion__price-list-li">
-                      <span class="accordion__price-list-span"> 2 дня </span>
-                      <span class="accordion__price-list-span"> Брифинг </span>
-                    </li>
-                    <li class="accordion__price-list-li">
-                      <span class="accordion__price-list-span"> 2 дня </span>
-                      <span class="accordion__price-list-span"> Брифинг </span>
-                    </li>
-                    <li class="accordion__price-list-li">
-                      <span class="accordion__price-list-span"> 2 дня </span>
-                      <span class="accordion__price-list-span"> Брифинг </span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="accordion__item">
-                <h3 class="accordion__title accordion__titleh4">
-                  Одностраничный промо-сайт
-                  <br />
-                  <span class="accordion__price"
-                    >Яркое представление основной услуги или товара</span
-                  >
-                </h3>
-                <p class="accordion__txt">
-                  Дизайн и разработка, стырь по шагам где расписано и
-                  откопирайти плз Дизайн и разработка, стырь по шагам где
-                  расписано и откопирайти плз Дизайн и разработка, стырь по
-                  шагам где расписано и откопирайти плз Дизайн и разработка,
-                  стырь по шагам где расписано и откопирайти плз
-                </p>
-              </div>
-              <div class="accordion__item">
-                <h3 class="accordion__title accordion__titleh4">
-                  Сайт визитка
-                  <br />
-                  <span class="accordion__price"
-                    >Помогите клиентам найти вас и ваши контакты</span
-                  >
-                </h3>
-                <div class="accordion__txt">
-                  Дизайн и разработка, стырь по шагам где расписано и
-                  откопирайти плз.
-                  <ul class="accordion-price-list">
-                    <li class="accordion__price-list-li">
-                      <span class="accordion__price-list-span"> 2 дня </span>
-                      <span class="accordion__price-list-span"> Брифинг </span>
-                    </li>
-                    <li class="accordion__price-list-li">
-                      <span class="accordion__price-list-span"> 2 дня </span>
-                      <span class="accordion__price-list-span"> Брифинг </span>
-                    </li>
-                    <li class="accordion__price-list-li">
-                      <span class="accordion__price-list-span"> 2 дня </span>
-                      <span class="accordion__price-list-span"> Брифинг </span>
-                    </li>
-                    <li class="accordion__price-list-li">
-                      <span class="accordion__price-list-span"> 2 дня </span>
-                      <span class="accordion__price-list-span"> Брифинг </span>
-                    </li>
-                    <li class="accordion__price-list-li">
-                      <span class="accordion__price-list-span"> 2 дня </span>
-                      <span class="accordion__price-list-span"> Брифинг </span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="accordion__item">
-                <h3 class="accordion__title accordion__titleh4">
-                  Социальные сети
-                  <br />
-                  <span class="accordion__price"
-                    >Продающий дизайн для вашего набора социальных сетей</span
-                  >
-                </h3>
-                <div class="accordion__txt">
-                  Дизайн и разработка, стырь по шагам где расписано и
-                  откопирайти плз.
-                  <ul class="accordion-price-list">
-                    <li class="accordion__price-list-li">
-                      <span class="accordion__price-list-span"> 2 дня </span>
-                      <span class="accordion__price-list-span"> Брифинг </span>
-                    </li>
-                    <li class="accordion__price-list-li">
-                      <span class="accordion__price-list-span"> 2 дня </span>
-                      <span class="accordion__price-list-span"> Брифинг </span>
-                    </li>
-                    <li class="accordion__price-list-li">
-                      <span class="accordion__price-list-span"> 2 дня </span>
-                      <span class="accordion__price-list-span"> Брифинг </span>
-                    </li>
-                    <li class="accordion__price-list-li">
-                      <span class="accordion__price-list-span"> 2 дня </span>
-                      <span class="accordion__price-list-span"> Брифинг </span>
-                    </li>
-                    <li class="accordion__price-list-li">
-                      <span class="accordion__price-list-span"> 2 дня </span>
-                      <span class="accordion__price-list-span"> Брифинг </span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
+            <p>
+              Эффектный лендинг или корпоративный сайт. Оформление соц. сетей и
+              банеров для интернет-рекламы
+            </p>
           </div>
         </div>
       </div>
@@ -422,9 +304,10 @@
           <span class="accordion__price">Решение задач бизнеса</span>
         </h3>
         <div class="accordion__txt">
-          Оставьте свои контакты или свяжитесь с нами сами <br>
-          <a href="#" class="btn popup-btn" style="margin-top: 15px">связаться</a>
           <div class="accordion-price-list">
+            <a href="#" class="btn btn-ml popup-btn" style="margin-top: 15px"
+              >связаться</a
+            >
             <div class="accordion">
               <div class="accordion__item">
                 <h3 class="accordion__title accordion__titleh4">
@@ -436,30 +319,8 @@
                   >
                 </h3>
                 <div class="accordion__txt">
-                  Дизайн и разработка, стырь по шагам где расписано и
-                  откопирайти плз.
-                  <ul class="accordion-price-list">
-                    <li class="accordion__price-list-li">
-                      <span class="accordion__price-list-span"> 2 дня </span>
-                      <span class="accordion__price-list-span"> Брифинг </span>
-                    </li>
-                    <li class="accordion__price-list-li">
-                      <span class="accordion__price-list-span"> 2 дня </span>
-                      <span class="accordion__price-list-span"> Брифинг </span>
-                    </li>
-                    <li class="accordion__price-list-li">
-                      <span class="accordion__price-list-span"> 2 дня </span>
-                      <span class="accordion__price-list-span"> Брифинг </span>
-                    </li>
-                    <li class="accordion__price-list-li">
-                      <span class="accordion__price-list-span"> 2 дня </span>
-                      <span class="accordion__price-list-span"> Брифинг </span>
-                    </li>
-                    <li class="accordion__price-list-li">
-                      <span class="accordion__price-list-span"> 2 дня </span>
-                      <span class="accordion__price-list-span"> Брифинг </span>
-                    </li>
-                  </ul>
+                  Конечная цена зависит от количества блоков и страниц,
+                  сложности макета. В среднем, от 20.000р
                 </div>
               </div>
               <div class="accordion__item">
@@ -471,11 +332,8 @@
                   >
                 </h3>
                 <p class="accordion__txt">
-                  Дизайн и разработка, стырь по шагам где расписано и
-                  откопирайти плз Дизайн и разработка, стырь по шагам где
-                  расписано и откопирайти плз Дизайн и разработка, стырь по
-                  шагам где расписано и откопирайти плз Дизайн и разработка,
-                  стырь по шагам где расписано и откопирайти плз
+                  Конечная цена зависит от количества блоков и страниц,
+                  сложности макета. В среднем, от 10.000р
                 </p>
               </div>
               <div class="accordion__item">
@@ -487,30 +345,8 @@
                   >
                 </h3>
                 <div class="accordion__txt">
-                  Дизайн и разработка, стырь по шагам где расписано и
-                  откопирайти плз.
-                  <ul class="accordion-price-list">
-                    <li class="accordion__price-list-li">
-                      <span class="accordion__price-list-span"> 2 дня </span>
-                      <span class="accordion__price-list-span"> Брифинг </span>
-                    </li>
-                    <li class="accordion__price-list-li">
-                      <span class="accordion__price-list-span"> 2 дня </span>
-                      <span class="accordion__price-list-span"> Брифинг </span>
-                    </li>
-                    <li class="accordion__price-list-li">
-                      <span class="accordion__price-list-span"> 2 дня </span>
-                      <span class="accordion__price-list-span"> Брифинг </span>
-                    </li>
-                    <li class="accordion__price-list-li">
-                      <span class="accordion__price-list-span"> 2 дня </span>
-                      <span class="accordion__price-list-span"> Брифинг </span>
-                    </li>
-                    <li class="accordion__price-list-li">
-                      <span class="accordion__price-list-span"> 2 дня </span>
-                      <span class="accordion__price-list-span"> Брифинг </span>
-                    </li>
-                  </ul>
+                  Конечная цена зависит от количества блоков и страниц,
+                  сложности макета. В среднем, от 5.000р
                 </div>
               </div>
             </div>
@@ -522,188 +358,68 @@
           Реклама
           <br />
           <span class="accordion__price"
-            >Платные и бесплатные источники трафика</span
+            >Продвижение в телеграм и работа с репутацией</span
           >
         </h3>
         <div class="accordion__txt">
-          Оставьте свои контакты или свяжитесь с нами сами <br>
-          <a href="#" class="btn popup-btn" style="margin-top: 15px">связаться</a>
+          <br />
+          <a href="#" class="btn btn-ml popup-btn" style="margin-top: 15px"
+            >связаться</a
+          >
           <div class="accordion-price-list">
             <div class="accordion">
               <div class="accordion__item">
                 <h3 class="accordion__title accordion__titleh4">
-                  Одностраничный промо сайт
+                  Массовая рассылка по телеграмм чатам
                   <br />
-                  <span class="accordion__price">от 25 000₽ — от 7 дней</span>
+                  <span class="accordion__price">от 400р в день</span>
                 </h3>
                 <p class="accordion__txt">
-                  Дизайн и разработка, стырь по шагам где расписано и
-                  откопирайти плз Дизайн и разработка, стырь по шагам где
-                  расписано и откопирайти плз Дизайн и разработка, стырь по
-                  шагам где расписано и откопирайти плз Дизайн и разработка,
-                  стырь по шагам где расписано и откопирайти плз
+                  Бесплатно подберем чаты по вашей нише и запустим тесты,
+                  масштабируем трафик за адекватные деньги
                 </p>
               </div>
 
               <div class="accordion__item">
                 <h3 class="accordion__title accordion__titleh4">
-                  Реклама
+                  Отзывы
                   <br />
-                  <span class="accordion__price">от 50 000₽ — от 7 дней</span>
+                  <span class="accordion__price">от 150р за отзыв</span>
                 </h3>
                 <div class="accordion__txt">
-                  Дизайн и разработка, стырь по шагам где расписано и
-                  откопирайти плз.
+                  Посмотрите на конкурентов вокруг вас и ужаснитесь, ведь они
+                  уже давно пользуются этой услугой;)
                   <ul class="accordion-price-list">
                     <li class="accordion__price-list-li">
-                      <span class="accordion__price-list-span"> 2 дня </span>
-                      <span class="accordion__price-list-span"> Брифинг </span>
+                      <span class="accordion__price-list-span">
+                        Репутация на отзовиках (zoon, yell, отзовик и др.)
+                      </span>
+                      <span class="accordion__price-list-span"> от 200р </span>
                     </li>
                     <li class="accordion__price-list-li">
-                      <span class="accordion__price-list-span"> 2 дня </span>
-                      <span class="accordion__price-list-span"> Брифинг </span>
+                      <span class="accordion__price-list-span">
+                        Репутация на картах (Яндекс, 2гис, google)
+                      </span>
+                      <span class="accordion__price-list-span"> от 250р </span>
                     </li>
                     <li class="accordion__price-list-li">
-                      <span class="accordion__price-list-span"> 2 дня </span>
-                      <span class="accordion__price-list-span"> Брифинг </span>
+                      <span class="accordion__price-list-span">
+                        Репутация на Яндекс.Маркете
+                      </span>
+                      <span class="accordion__price-list-span"> от 350р </span>
                     </li>
                     <li class="accordion__price-list-li">
-                      <span class="accordion__price-list-span"> 2 дня </span>
-                      <span class="accordion__price-list-span"> Брифинг </span>
+                      <span class="accordion__price-list-span">
+                        Репутация в магазинах приложений (App Store / Google
+                        play)
+                      </span>
+                      <span class="accordion__price-list-span"> от 250р </span>
                     </li>
                     <li class="accordion__price-list-li">
-                      <span class="accordion__price-list-span"> 2 дня </span>
-                      <span class="accordion__price-list-span"> Брифинг </span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="accordion__item">
-        <h3 class="accordion__title">
-          Продающий landing page
-          <br />
-          <span class="accordion__price"
-            >Вывод бизнеса на интернет-рынок под ключ</span
-          >
-        </h3>
-        <div class="accordion__txt">
-          Оставьте свои контакты или свяжитесь с нами сами <br>
-          <a href="#" class="btn popup-btn" style="margin-top: 15px">связаться</a>
-          <div class="accordion-price-list">
-            <div class="accordion">
-              <div class="accordion__item">
-                <h3 class="accordion__title accordion__titleh4">
-                  Анализ бизнес-целей и рынка
-                  <br />
-                  <span class="accordion__price">5000₽ — 3 дня</span>
-                </h3>
-                <p class="accordion__txt">
-                  Дизайн и разработка, стырь по шагам где расписано и
-                  откопирайти плз Дизайн и разработка, стырь по шагам где
-                  расписано и откопирайти плз Дизайн и разработка, стырь по
-                  шагам где расписано и откопирайти плз Дизайн и разработка,
-                  стырь по шагам где расписано и откопирайти плз
-                </p>
-              </div>
-              <div class="accordion__item">
-                <h3 class="accordion__title accordion__titleh4">
-                  Создание уникального дизайна
-                  <br />
-                  <span class="accordion__price">15 000₽ — 7 дней</span>
-                </h3>
-                <div class="accordion__txt">
-                  Дизайн и разработка, стырь по шагам где расписано и
-                  откопирайти плз.
-                  <ul class="accordion-price-list">
-                    <li class="accordion__price-list-li">
-                      <span class="accordion__price-list-span"> 2 дня </span>
-                      <span class="accordion__price-list-span"> Брифинг </span>
-                    </li>
-                    <li class="accordion__price-list-li">
-                      <span class="accordion__price-list-span"> 2 дня </span>
-                      <span class="accordion__price-list-span"> Брифинг </span>
-                    </li>
-                    <li class="accordion__price-list-li">
-                      <span class="accordion__price-list-span"> 2 дня </span>
-                      <span class="accordion__price-list-span"> Брифинг </span>
-                    </li>
-                    <li class="accordion__price-list-li">
-                      <span class="accordion__price-list-span"> 2 дня </span>
-                      <span class="accordion__price-list-span"> Брифинг </span>
-                    </li>
-                    <li class="accordion__price-list-li">
-                      <span class="accordion__price-list-span"> 2 дня </span>
-                      <span class="accordion__price-list-span"> Брифинг </span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="accordion__item">
-                <h3 class="accordion__title accordion__titleh4">
-                  Разработка
-                  <br />
-                  <span class="accordion__price">15 000₽ — 7 дней</span>
-                </h3>
-                <div class="accordion__txt">
-                  Дизайн и разработка, стырь по шагам где расписано и
-                  откопирайти плз.
-                  <ul class="accordion-price-list">
-                    <li class="accordion__price-list-li">
-                      <span class="accordion__price-list-span"> 2 дня </span>
-                      <span class="accordion__price-list-span"> Брифинг </span>
-                    </li>
-                    <li class="accordion__price-list-li">
-                      <span class="accordion__price-list-span"> 2 дня </span>
-                      <span class="accordion__price-list-span"> Брифинг </span>
-                    </li>
-                    <li class="accordion__price-list-li">
-                      <span class="accordion__price-list-span"> 2 дня </span>
-                      <span class="accordion__price-list-span"> Брифинг </span>
-                    </li>
-                    <li class="accordion__price-list-li">
-                      <span class="accordion__price-list-span"> 2 дня </span>
-                      <span class="accordion__price-list-span"> Брифинг </span>
-                    </li>
-                    <li class="accordion__price-list-li">
-                      <span class="accordion__price-list-span"> 2 дня </span>
-                      <span class="accordion__price-list-span"> Брифинг </span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="accordion__item">
-                <h3 class="accordion__title accordion__titleh4">
-                  Первичное продвижение
-                  <br />
-                  <span class="accordion__price">10 000₽ — 4 дня</span>
-                </h3>
-                <div class="accordion__txt">
-                  Дизайн и разработка, стырь по шагам где расписано и
-                  откопирайти плз.
-                  <ul class="accordion-price-list">
-                    <li class="accordion__price-list-li">
-                      <span class="accordion__price-list-span"> 2 дня </span>
-                      <span class="accordion__price-list-span"> Брифинг </span>
-                    </li>
-                    <li class="accordion__price-list-li">
-                      <span class="accordion__price-list-span"> 2 дня </span>
-                      <span class="accordion__price-list-span"> Брифинг </span>
-                    </li>
-                    <li class="accordion__price-list-li">
-                      <span class="accordion__price-list-span"> 2 дня </span>
-                      <span class="accordion__price-list-span"> Брифинг </span>
-                    </li>
-                    <li class="accordion__price-list-li">
-                      <span class="accordion__price-list-span"> 2 дня </span>
-                      <span class="accordion__price-list-span"> Брифинг </span>
-                    </li>
-                    <li class="accordion__price-list-li">
-                      <span class="accordion__price-list-span"> 2 дня </span>
-                      <span class="accordion__price-list-span"> Брифинг </span>
+                      <span class="accordion__price-list-span">
+                        Репутация на любой вашей площадке (сайты, соц. сети)
+                      </span>
+                      <span class="accordion__price-list-span"> от 300р </span>
                     </li>
                   </ul>
                 </div>
@@ -716,139 +432,211 @@
   </div>
 </section>
 
-  <section class="section section-portfolio">
-    <div class="container">
-        <h2
-        class="main-h2 main-h2_portfolio text text--karaoke"
-        data-scroll="out"
-        data-splitting=""
-      >
-        <span class="main-h2__span"> портфолио </span>
-      </h2>
-        <div class="portfolio">
-            <div class="portfolio__body">
-                <div class="portfolio__col">
-                    <div class="portfolio__item">
-                        <div class="portfolio__img-wrapper">
-                            <img src="img/portfolio/p1.jpg" class="portfolio__img" alt="">
-                        </div>
-                        <div class="portfolio__content">
-                            <p class="portfolio__p">
-                                Разработка сайта для новой криптовалюты
-                                Разработка сайта для новой криптовалюты
-                                Разработка сайта для новой криптовалюты
-                                Разработка сайта для новой криптовалюты
-                                Разработка сайта для новой криптовалюты
-                                Разработка сайта для новой криптовалюты
-                                Разработка сайта для новой криптовалюты
-
-                            </p> 
-                            <div class="portfolio__btns">
-                                <a href="#" class="btn btn_trans">посмотреть</a>
-                                <a href="#" class="btn popup-btn">связаться</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="portfolio__item">
-                        <div class="portfolio__img-wrapper">
-                            <img src="img/portfolio/p1.jpg" class="portfolio__img" alt="">
-                        </div>
-                        <div class="portfolio__content">
-                            <p class="portfolio__p">
-                                Разработка сайта для новой криптовалюты
-                            </p> 
-                            <div class="portfolio__btns">
-                                <a href="#" class="btn btn_trans">посмотреть</a>
-                                <a href="#" class="btn popup-btn">связаться</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="portfolio__item">
-                        <div class="portfolio__img-wrapper">
-                            <img src="img/portfolio/p1.jpg" class="portfolio__img" alt="">
-                        </div>
-                        <div class="portfolio__content">
-                            <p class="portfolio__p">
-                                Разработка сайта для новой криптовалюты
-                                Разработка сайта для новой криптовалюты
-                                Разработка сайта для новой криптовалюты
-                                Разработка сайта для новой криптовалюты
-                                Разработка сайта для новой криптовалюты
-
-                            </p> 
-                            <div class="portfolio__btns">
-                                <a href="#" class="btn btn_trans">посмотреть</a>
-                                <a href="#" class="btn popup-btn">связаться</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio__col">
-                    <div class="portfolio__item">
-                        <div class="portfolio__img-wrapper">
-                            <img src="img/portfolio/p1.jpg" class="portfolio__img" alt="">
-                        </div>
-                        <div class="portfolio__content">
-                            <p class="portfolio__p">
-                                Разработка сайта для новой криптовалюты
-                                Разработка сайта для новой криптовалюты
-                            </p> 
-                            <div class="portfolio__btns">
-                                <a href="#" class="btn btn_trans">посмотреть</a>
-                                <a href="#" class="btn popup-btn">связаться</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="portfolio__item">
-                        <div class="portfolio__img-wrapper">
-                            <img src="img/portfolio/p1.jpg" class="portfolio__img" alt="">
-                        </div>
-                        <div class="portfolio__content">
-                            <p class="portfolio__p">
-                                Разработка сайта для новой криптовалюты
-                                Разработка сайта для новой криптовалюты
-                                Разработка сайта для новой криптовалюты
-                                Разработка сайта для новой криптовалюты
-                                Разработка сайта для новой криптовалюты
-                                Разработка сайта для новой криптовалюты
-                                Разработка сайта для новой криптовалюты
-                                Разработка сайта для новой криптовалюты
-                                Разработка сайта для новой криптовалюты
-                                Разработка сайта для новой криптовалюты
-                          
-
-                            </p> 
-                            <div class="portfolio__btns">
-                                <a href="#" class="btn btn_trans">посмотреть</a>
-                                <a href="#" class="btn popup-btn">связаться</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="portfolio__item">
-                        <div class="portfolio__img-wrapper">
-                            <img src="img/portfolio/p1.jpg" class="portfolio__img" alt="">
-                        </div>
-                        <div class="portfolio__content">
-                            <p class="portfolio__p">
-                                Разработка сайта для новой криптовалюты
-                                Разработка сайта для новой криптовалюты
-                            </p> 
-                            <div class="portfolio__btns">
-                                <a href="#" class="btn btn_trans">посмотреть</a>
-                                <a href="#" class="btn popup-btn">связаться</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-</section>
-  <section class="section section-contacts">
+  <section class="section section-portfolio" id="portfolio">
   <div class="container">
     <h2
-      class="main-h2 main-h2_contacts text text--karaoke"
+      class="main-h2 main-h2_portfolio text text--turning"
+      data-scroll="out"
+      data-splitting=""
+    >
+      <span class="main-h2__span"> портфолио </span>
+    </h2>
+    <div class="portfolio">
+      <div class="portfolio__body">
+        <div class="portfolio__col">
+          <div class="portfolio__item">
+            <div class="portfolio__img-wrapper">
+              <img
+                src="img/portfolio/1.webp"
+                class="portfolio__img"
+                alt="работа портфолио 1"
+              />
+            </div>
+            <div class="portfolio__content">
+              <div class="portfolio__btns">
+                <a href="https://borisslonov.github.io/hi-fi/dist/index.html" target="_blank" class="btn btn_trans">посмотреть</a>
+                <a href="#" class="btn popup-btn">связаться</a>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio__item">
+            <div class="portfolio__img-wrapper">
+              <img
+                src="img/portfolio/3.webp"
+                class="portfolio__img"
+                alt="работа портфолио 3"
+              />
+            </div>
+            <div class="portfolio__content">
+              <div class="portfolio__btns">
+                <a href="https://noeks.ru/" target="_blank" class="btn btn_trans">посмотреть</a>
+                <a href="#" class="btn popup-btn">связаться</a>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio__item">
+            <div class="portfolio__img-wrapper">
+              <img
+                src="img/portfolio/5.webp"
+                class="portfolio__img"
+                alt="работа портфолио 5"
+              />
+            </div>
+            <div class="portfolio__content">
+              <div class="portfolio__btns">
+                <a href="https://urovenservisa.ru/" target="_blank" class="btn btn_trans">посмотреть</a>
+                <a href="#" class="btn popup-btn">связаться</a>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio__item">
+            <div class="portfolio__img-wrapper">
+              <img
+                src="img/portfolio/7.webp"
+                class="portfolio__img"
+                alt="работа портфолио 7"
+              />
+            </div>
+            <div class="portfolio__content">
+              <div class="portfolio__btns">
+                <a href="https://borisslonov.github.io/gleniks" target="_blank" class="btn btn_trans">посмотреть</a>
+                <a href="#" class="btn popup-btn">связаться</a>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio__item">
+            <div class="portfolio__img-wrapper">
+              <img
+                src="img/portfolio/9.webp"
+                class="portfolio__img"
+                alt="работа портфолио 9"
+              />
+            </div>
+            <div class="portfolio__content">
+              <div class="portfolio__btns">
+                <a href="https://borisslonov.github.io/desire/" target="_blank" class="btn btn_trans">посмотреть</a>
+                <a href="#" class="btn popup-btn">связаться</a>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio__item">
+            <div class="portfolio__img-wrapper">
+              <img
+                src="img/portfolio/11.webp"
+                class="portfolio__img"
+                alt="работа портфолио 11"
+              />
+            </div>
+            <div class="portfolio__content">
+              <div class="portfolio__btns">
+                <a href="https://borisslonov.github.io/BorisSlonov.github.io-alumcomplite/" target="_blank" class="btn btn_trans">посмотреть</a>
+                <a href="#" class="btn popup-btn">связаться</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- col -->
+        <div class="portfolio__col">
+          <div class="portfolio__item">
+            <div class="portfolio__img-wrapper">
+              <img
+                src="img/portfolio/2.webp"
+                class="portfolio__img"
+                alt="работа портфолио 2"
+              />
+            </div>
+            <div class="portfolio__content">
+              <div class="portfolio__btns">
+                <a href="https://www.purrweb.com/services/mobile-development/" target="_blank" class="btn btn_trans">посмотреть</a>
+                <a href="#" class="btn popup-btn">связаться</a>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio__item">
+            <div class="portfolio__img-wrapper">
+              <img
+                src="img/portfolio/4.webp"
+                class="portfolio__img"
+                alt="работа портфолио 4"
+              />
+            </div>
+            <div class="portfolio__content">
+              <div class="portfolio__btns">
+                <a href="https://borisslonov.github.io/estet/" target="_blank" class="btn btn_trans">посмотреть</a>
+                <a href="#" class="btn popup-btn">связаться</a>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio__item">
+            <div class="portfolio__img-wrapper">
+              <img
+                src="img/portfolio/6.webp"
+                class="portfolio__img"
+                alt="работа портфолио 6"
+              />
+            </div>
+            <div class="portfolio__content">
+              <div class="portfolio__btns">
+                <a href="https://borisslonov.github.io/metaPlar/" target="_blank" class="btn btn_trans">посмотреть</a>
+                <a href="#" class="btn popup-btn">связаться</a>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio__item">
+            <div class="portfolio__img-wrapper">
+              <img
+                src="img/portfolio/8.webp"
+                class="portfolio__img"
+                alt="работа портфолио 8"
+              />
+            </div>
+            <div class="portfolio__content">
+              <div class="portfolio__btns">
+                <a href="https://borisslonov.github.io/etalon-sibiri/" target="_blank" class="btn btn_trans">посмотреть</a>
+                <a href="#" class="btn popup-btn">связаться</a>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio__item">
+            <div class="portfolio__img-wrapper">
+              <img
+                src="img/portfolio/10.webp"
+                class="portfolio__img"
+                alt="работа портфолио 10"
+              />
+            </div>
+            <div class="portfolio__content">
+              <div class="portfolio__btns">
+                <a href="https://borisslonov.github.io/sorokoletova-main/" target="_blank" class="btn btn_trans">посмотреть</a>
+                <a href="#" class="btn popup-btn">связаться</a>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio__item">
+            <div class="portfolio__img-wrapper">
+              <img
+                src="img/portfolio/12.webp"
+                class="portfolio__img"
+                alt="работа портфолио 12"
+              />
+            </div>
+            <div class="portfolio__content">
+              <div class="portfolio__btns">
+                <a href="https://borisslonov.github.io/bonumFM/" target="_blank" class="btn btn_trans">посмотреть</a>
+                <a href="#" class="btn popup-btn">связаться</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <section class="section section-contacts" id="contacts">
+  <div class="container">
+    <h2
+      class="main-h2 main-h2_contacts text text--turning"
       data-scroll="out"
       data-splitting=""
     >
@@ -856,25 +644,17 @@
     </h2>
     <div class="contacts">
       <div class="contacts__item contacts-items">
-        <a href="#" class="contacts-items__item">
-          tg:
+        <a href="https://t.me/zenwebsupport" target="_blank" class="contacts-items__item">
+          <img width="24" height="24" style="margin-right: 10px;" src="img/social/tg.svg" alt="телеграм">
           <span>@zenwebsupport</span>
         </a>
-        <a href="#" class="contacts-items__item">
-            wa:
-            <span>@zenwebsupport</span>
-          </a>
-        <a href="#"  class="contacts-items__item">
-          mail:
-          <span> info@zenweb.agancy </span>
-        </a>
-        <a href="#"  class="contacts-items__item">
-          tel:
-          <span> +7 996 569 00 15 </span>
+        <a href="https://vk.com/slonovboris" class="contacts-items__item">
+          <img width="24" height="24" style="margin-right: 10px;" src="img/social/vk.svg" alt="вк">
+          <span>@slonovboris</span>
         </a>
       </div>
       <div class="contacts__item">
-       <img src="img/laptop.svg" alt="">
+        <img src="img/laptop.svg" alt="" />
       </div>
     </div>
   </div>
@@ -882,145 +662,8 @@
 
 </main>
 
-      <footer class="footer">
-  <div class="footer__item">
-    <div class="footer__line footer__line_1">
-      <span> diljem svijeta </span>
-      <span> celosvětově </span>
-      <span> i hele verden </span>
-      <span> wereldwijd </span>
-      <span> worldwide </span>
-      <span> tutmonde </span>
-      <span> kogu maailmas </span>
-      <span> sa buong mundo </span>
-      <span> maailmanlaajuinen </span>
-      <span> à l'échelle mondiale </span>
-      <span> en todo o mundo </span>
-      <span> diljem svijeta </span>
-      <span> celosvětově </span>
-      <span> i hele verden </span>
-      <span> wereldwijd </span>
-      <span> worldwide </span>
-      <span> tutmonde </span>
-      <span> kogu maailmas </span>
-      <span> sa buong mundo </span>
-      <span> maailmanlaajuinen </span>
-      <span> à l'échelle mondiale </span>
-      <span> en todo o mundo </span>
-    </div>
-    <div class="footer__line footer__line_2">
-      <span> во всем мире </span>
-      <span> во всем мире </span>
-      <span> во всем мире </span>
-      <span> во всем мире </span>
-      <span> во всем мире </span>
-      <span> во всем мире </span>
-      <span> во всем мире </span>
-      <span> во всем мире </span>
-      <span> во всем мире </span>
-      <span> во всем мире </span>
-      <span> во всем мире </span>
-      <span> во всем мире </span>
-      <span> во всем мире </span>
-      <span> во всем мире </span>
-      <span> во всем мире </span>
-      <span> во всем мире </span>
-      <span> во всем мире </span>
-      <span> во всем мире </span>
-      <span> во всем мире </span>
-      <span> во всем мире </span>
-      <span> во всем мире </span>
-      <span> во всем мире </span>
-      <span> во всем мире </span>
-      <span> во всем мире </span>
-    </div>
-    <div class="footer__line footer__line_3">
-      <span> во всем мире </span>
-      <span> во всем мире </span>
-      <span> во всем мире </span>
-      <span> во всем мире </span>
-      <span> во всем мире </span>
-      <span> во всем мире </span>
-      <span> во всем мире </span>
-      <span> во всем мире </span>
-      <span> во всем мире </span>
-      <span> во всем мире </span>
-      <span> во всем мире </span>
-      <span> во всем мире </span>
-      <span> во всем мире </span>
-      <span> во всем мире </span>
-      <span> во всем мире </span>
-      <span> во всем мире </span>
-      <span> во всем мире </span>
-      <span> во всем мире </span>
-      <span> во всем мире </span>
-      <span> во всем мире </span>
-      <span> во всем мире </span>
-      <span> во всем мире </span>
-      <span> во всем мире </span>
-      <span> во всем мире </span>
-    </div>
-    <div class="footer__line footer__line_4">
-      <span> in u mondu sanu </span>
-      <span> 全世界 </span>
-      <span> tibuok kalibutan </span>
-      <span> arreu del món </span>
-      <span> worldwide </span>
-      <span> በዓለም ዙሪያ </span>
-      <span> wêreldwyd </span>
-      <span> في جميع أنحاء العالم </span>
-      <span> mundu osoan </span>
-      <span> աշխարհով մեկ </span>
-      <span> dünya üzrə </span>
-      <span> বিশ্বব্যাপী </span>
-      <span> ва ўсім свеце </span>
-      <span> širom svijeta </span>
-      <span> в световен мащаб </span>
-      <span> ကမ္ဘာတစ်ဝှမ်း </span>
-      <span> in u mondu sanu </span>
-      <span> 全世界 </span>
-      <span> tibuok kalibutan </span>
-      <span> arreu del món </span>
-      <span> worldwide </span>
-      <span> በዓለም ዙሪያ </span>
-      <span> wêreldwyd </span>
-      <span> في جميع أنحاء العالم </span>
-      <span> mundu osoan </span>
-      <span> աշխարհով մեկ </span>
-      <span> dünya üzrə </span>
-      <span> বিশ্বব্যাপী </span>
-      <span> ва ўсім свеце </span>
-      <span> širom svijeta </span>
-      <span> в световен мащаб </span>
-      <span> ကမ္ဘာတစ်ဝှမ်း </span>
-    </div>
-    <div class="footer__line footer__line_5">
-      <span> во всем мире </span>
-      <span> во всем мире </span>
-      <span> во всем мире </span>
-      <span> во всем мире </span>
-      <span> во всем мире </span>
-      <span> во всем мире </span>
-      <span> во всем мире </span>
-      <span> во всем мире </span>
-      <span> во всем мире </span>
-      <span> во всем мире </span>
-      <span> во всем мире </span>
-      <span> во всем мире </span>
-      <span> во всем мире </span>
-      <span> во всем мире </span>
-      <span> во всем мире </span>
-      <span> во всем мире </span>
-      <span> во всем мире </span>
-      <span> во всем мире </span>
-      <span> во всем мире </span>
-      <span> во всем мире </span>
-      <span> во всем мире </span>
-      <span> во всем мире </span>
-      <span> во всем мире </span>
-      <span> во всем мире </span>
-    </div>
-  </div>
+      <!-- <footer class="footer">
+  <div class="footer__item">хай</div>
   <div class="footer__item">
     <div class="globe">
       <svg
@@ -1039,7 +682,7 @@
       </svg>
     </div>
   </div>
-</footer>
+</footer> -->
 
       <div class="popup popup_main-popup hide">
   <div class="main-popup">
@@ -1048,37 +691,23 @@
       <div class="popup-close popup-close_esc"></div>
     </div>
     <div class="main-popup__body">
-      <form action="#" class="main-form">
-        <div class="main-form__item">
-          <input
-            type="text"
-            name="name"
-            class="main-form__input"
-            placeholder="Имя"
-          />
-        </div>
-        <div class="main-form__item">
-          <input
-            type="text"
-            name="phone"
-            class="main-form__input"
-            placeholder="Telegram / WhatsApp"
-            required
-          />
-        </div>
-        <div class="main-form__item">
-          <textarea
-            name="msg"
-            class="main-form__txtarea"
-            placeholder="Сообщение"
-          ></textarea>
-        </div>
-        <div class="main-form__item">
-          <div>
-            <button type="submit" class="btn">отправить</button>
-          </div>
-        </div>
-      </form>
+      <div
+        class="contacts__item contacts-items"
+        style="margin-left: 0; margin-top: 0"
+      >
+        <a
+          href="https://t.me/zenwebsupport"
+          target="_blank"
+          class="contacts-items__item"
+        >
+          <img width="24" height="24" style="margin-right: 10px;" src="img/social/tg.svg" alt="телеграм" />
+          <span>@zenwebsupport</span>
+        </a>
+        <a href="https://vk.com/slonovboris" class="contacts-items__item">
+          <img width="24" height="24" style="margin-right: 10px;"  src="img/social/vk.svg" alt="вк" />
+          <span>@slonovboris</span>
+        </a>
+      </div>
     </div>
   </div>
 </div>

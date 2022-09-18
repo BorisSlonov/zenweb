@@ -34,9 +34,8 @@
     background-color: var(--darken);
     padding: 20px;
     border-radius: 8px;
-    margin-top: 10px;
+    margin-top: 5px;
     @media(max-width:1023px) {
-        margin-top: 5px;
         padding: 10px;
     }
   }
@@ -44,7 +43,6 @@
   &__btns {
     display: flex;
     align-items: center;
-    margin-top: 10px;
     .btn:last-child {
         margin-left: 10px;
     }

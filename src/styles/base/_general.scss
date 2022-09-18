@@ -1,7 +1,9 @@
 * {
   box-sizing: border-box;
 }
-
+html {
+  scroll-behavior: smooth;
+}
 html,
 body {
   font-family: "Anonymous Pro", monospace;
@@ -79,7 +81,10 @@ h1 {
     font-size: 60px;
   }
   @media (max-width: 550px) {
-    font-size: 50px;
+    font-size: 54px;
+  }
+  @media (max-width: 374px) {
+    font-size: 46px;
   }
 }
 
@@ -88,7 +93,7 @@ h1 {
   font-size: 120px;
   margin-bottom: 80px;
   color: #fff;
-  @media(max-width:767px) {
+  @media (max-width: 767px) {
     font-size: 54px;
     margin-bottom: 60px;
   }
@@ -105,17 +110,17 @@ h1 {
       top: 0;
       width: 200px;
       height: 200px;
-      background-image: url("../img/splash/Neon03.png");
+      background-image: url("../img/splash/Neon03.webp");
       background-position: 50% 50%;
       background-size: contain;
       background-repeat: no-repeat;
       transform: rotate(-124deg);
-      @media(max-width:767px) {
+      @media (max-width: 767px) {
         left: -10%;
         top: -100%;
         transform: rotate(60deg);
       }
-      @media(max-width:425px) {
+      @media (max-width: 425px) {
         left: -30%;
       }
     }
@@ -129,15 +134,15 @@ h1 {
       top: 0;
       width: 200px;
       height: 200px;
-      background-image: url("../img/splash/Neon02.png");
+      background-image: url("../img/splash/Neon02.webp");
       background-position: 50% 50%;
       background-size: contain;
       background-repeat: no-repeat;
-      @media(max-width:767px) {
+      @media (max-width: 767px) {
         left: -10%;
         top: -100%;
       }
-      @media(max-width:425px) {
+      @media (max-width: 425px) {
         left: -30%;
       }
     }
@@ -151,16 +156,16 @@ h1 {
       top: 0;
       width: 200px;
       height: 200px;
-      background-image: url("../img/splash/Dark02.png");
+      background-image: url("../img/splash/Dark02.webp");
       background-position: 50% 50%;
       background-size: contain;
       background-repeat: no-repeat;
       transform: rotate(-124deg);
-      @media(max-width:767px) {
+      @media (max-width: 767px) {
         left: -10%;
         top: -100%;
       }
-      @media(max-width:425px) {
+      @media (max-width: 425px) {
         left: -30%;
       }
     }
@@ -174,16 +179,16 @@ h1 {
       top: 0;
       width: 200px;
       height: 200px;
-      background-image: url("../img/splash/Dark01.png");
+      background-image: url("../img/splash/Dark01.webp");
       background-position: 50% 50%;
       background-size: contain;
       background-repeat: no-repeat;
       transform: rotate(-124deg);
-      @media(max-width:767px) {
+      @media (max-width: 767px) {
         left: -10%;
         top: -100%;
       }
-      @media(max-width:425px) {
+      @media (max-width: 425px) {
         left: -30%;
       }
     }
@@ -231,7 +236,7 @@ img {
   max-width: 90%;
   padding: 0 15px;
   margin: 0 auto;
-  @media(max-width:767px) {
+  @media (max-width: 767px) {
     max-width: 100%;
   }
 }

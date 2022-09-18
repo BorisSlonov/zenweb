@@ -30,6 +30,8 @@
   }
 }
 .contacts-items__item {
+  display: flex;
+  align-items: center;
   position: relative;
   z-index: 2;
   color: var(--sky);
