@@ -2328,10 +2328,11 @@ canvas {
 
 .portfolio__col {
   display: grid;
-  gap: 5px;
+  gap: 10px;
 }
 
 .portfolio__item {
+  position: relative;
   border-radius: 10px;
   background-color: var(--sky);
   padding: 5px;
@@ -2346,9 +2347,13 @@ canvas {
 }
 
 .portfolio__content {
-  background-color: var(--darken);
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+  background-color: rgba(0, 86, 120, 0.6117647059);
   padding: 20px;
-  border-radius: 8px;
+  border-top-right-radius: 8px;
+  border-bottom-left-radius: 8px;
   margin-top: 5px;
 }
 
